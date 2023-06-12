@@ -3,7 +3,7 @@ Control your Crafty Vaporizer by Storz &amp; Bickel from a Web Page!
 
 Online web application is available at:
 
-[https://github.cataford.com/crafty](https://github.cataford.com/crafty)
+[https://sb.nopenix.de](https://sb.nopenix.de)
  
 
 ## Summary
