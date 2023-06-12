@@ -17,6 +17,24 @@ Supported platforms include the following (using modern versions of Chrome):
 * Android
 
 
+## Docker Container
+
+A Docker Container is availabe on the [https://hub.docker.com/r/nopenix/crafty-control](Docker Hub)
+
+### Example docker-compose
+
+```yml
+version: "3"
+services:
+    app:
+        image: nopenix/crafty-control
+        restart: unless-stopped
+        ports:
+            - 8100:8100
+
+```
+
+
 ## Screenshots
 ![Connect](https://i.ibb.co/S7RXJR1/crafty-connect.png) ![Home/Temperature](https://i.ibb.co/f07zY7d/github-cataford-com-crafty-i-Phone-6-7-8.png) 
 
