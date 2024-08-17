@@ -1,5 +1,5 @@
 # crafty-control
-Control your Crafty Vaporizer by Storz &amp; Bickel from a Web Page!
+Control your Crafty Vaporizer by Storz &amp; Bickel from a Web Page! 
 
 Online web application is available at:
 
