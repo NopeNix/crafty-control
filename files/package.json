@@ -1,6 +1,6 @@
 {
   "name": "crafty-control",
-  "version": "1.0.10-beta",
+  "version": "1.1 NopeNix",
   "private": true,
   "dependencies": {
     "@ionic/react": "^4.11.0",
@@ -25,7 +25,7 @@
     "typescript-task-queue": "^1.0.4"
   },
   "scripts": {
-    "ionic:build:before": "cross-env-shell PUBLIC_URL=https://github.cataford.com/crafty/",
+    "ionic:build:before": "cross-env-shell PUBLIC_URL=",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

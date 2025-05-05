@@ -1,6 +1,5 @@
 /* Ionic Variables and Theming. For more info, please see:
-http://ionicframew:ork.com/docs/theming/ */
-
+http://ionicframework.com/docs/theming/ */
 /** Ionic CSS Variables **/
 :root {
   --ion-toolbar-background: rgb(0, 40, 125);
@@ -16,7 +15,6 @@ http://ionicframew:ork.com/docs/theming/ */
   --ion-color-primary-contrast-rgb: 255, 255, 255;
   --ion-color-primary-shade: #3171e0;
   --ion-color-primary-tint: #4c8dff;
-
   /** secondary **/
   --ion-color-secondary: #0cd1e8;
   --ion-color-secondary-rgb: 12, 209, 232;
@@ -24,7 +22,6 @@ http://ionicframew:ork.com/docs/theming/ */
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
   --ion-color-secondary-shade: #0bb8cc;
   --ion-color-secondary-tint: #24d6ea;
-
   /** tertiary **/
   --ion-color-tertiary: #7044ff;
   --ion-color-tertiary-rgb: 112, 68, 255;
@@ -32,7 +29,6 @@ http://ionicframew:ork.com/docs/theming/ */
   --ion-color-tertiary-contrast-rgb: 255, 255, 255;
   --ion-color-tertiary-shade: #633ce0;
   --ion-color-tertiary-tint: #7e57ff;
-
   /** success **/
   --ion-color-success: #10dc60;
   --ion-color-success-rgb: 16, 220, 96;
@@ -40,7 +36,6 @@ http://ionicframew:ork.com/docs/theming/ */
   --ion-color-success-contrast-rgb: 255, 255, 255;
   --ion-color-success-shade: #0ec254;
   --ion-color-success-tint: #28e070;
-
   /** warning **/
   --ion-color-warning: #ffce00;
   --ion-color-warning-rgb: 255, 206, 0;
@@ -48,7 +43,6 @@ http://ionicframew:ork.com/docs/theming/ */
   --ion-color-warning-contrast-rgb: 255, 255, 255;
   --ion-color-warning-shade: #e0b500;
   --ion-color-warning-tint: #ffd31a;
-
   /** danger **/
   --ion-color-danger: #f04141;
   --ion-color-danger-rgb: 245, 61, 61;
@@ -56,7 +50,6 @@ http://ionicframew:ork.com/docs/theming/ */
   --ion-color-danger-contrast-rgb: 255, 255, 255;
   --ion-color-danger-shade: #d33939;
   --ion-color-danger-tint: #f25454;
-
   /** dark **/
   --ion-color-dark: #222428;
   --ion-color-dark-rgb: 34, 34, 34;
@@ -64,7 +57,6 @@ http://ionicframew:ork.com/docs/theming/ */
   --ion-color-dark-contrast-rgb: 255, 255, 255;
   --ion-color-dark-shade: #1e2023;
   --ion-color-dark-tint: #383a3e;
-
   /** medium **/
   --ion-color-medium: #989aa2;
   --ion-color-medium-rgb: 152, 154, 162;
@@ -72,7 +64,6 @@ http://ionicframew:ork.com/docs/theming/ */
   --ion-color-medium-contrast-rgb: 255, 255, 255;
   --ion-color-medium-shade: #86888f;
   --ion-color-medium-tint: #a2a4ab;
-
   /** light **/
   --ion-color-light: #f4f5f8;
   --ion-color-light-rgb: 244, 244, 244;
@@ -80,4 +71,144 @@ http://ionicframew:ork.com/docs/theming/ */
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+}
+
+/* Dark mode customizations with user-provided colors */
+body.dark {
+  /* Background for the entire app */
+  --ion-background-color: #121212;
+  --ion-background-color-rgb: 18, 18, 18;
+  /* Toolbar and Tab Bar background */
+  --ion-toolbar-background: #1e1e1e;
+  --ion-tab-bar-background: #1e1e1e;
+  /* Text colors for toolbar and tab bar - ensured bright for visibility */
+  --ion-toolbar-color: #ffffff !important;
+  --ion-tab-bar-color: #ffffff !important; /* Brightened to white for max contrast */
+  --ion-tab-bar-color-activated: #ff6600 !important; /* Keeping the orange for active tab */
+  /* Text color for general content - forced to white */
+  --ion-text-color: #ffffff !important;
+  /* Primary color (used for buttons, icons, etc.) */
+  --ion-color-primary: #ff6600;
+  --ion-color-primary-contrast: #ffffff !important;
+  --ion-color-primary-shade: #e65c00;
+  --ion-color-primary-tint: #ff751a;
+  /* Secondary color */
+  --ion-color-secondary: #0ca9bc;
+  --ion-color-secondary-contrast: #ffffff !important;
+  --ion-color-secondary-rgb: 12, 169, 188;
+  --ion-color-secondary-shade: #0b94a7;
+  --ion-color-secondary-tint: #24b2c3;
+  /* Tertiary color */
+  --ion-color-tertiary: #5a3ecc;
+  --ion-color-tertiary-contrast: #ffffff !important;
+  --ion-color-tertiary-rgb: 90, 62, 204;
+  --ion-color-tertiary-shade: #4f36b3;
+  --ion-color-tertiary-tint: #6b51d1;
+  /* Success, Warning, Danger colors */
+  --ion-color-success: #0ca63e;
+  --ion-color-success-contrast: #ffffff !important;
+  --ion-color-success-rgb: 12, 166, 62;
+  --ion-color-success-shade: #0b9136;
+  --ion-color-success-tint: #24af51;
+  --ion-color-warning: #cca300;
+  --ion-color-warning-contrast: #ffffff !important;
+  --ion-color-warning-rgb: 204, 163, 0;
+  --ion-color-warning-shade: #b38f00;
+  --ion-color-warning-tint: #d1ac1a;
+  --ion-color-danger: #cc3333;
+  --ion-color-danger-contrast: #ffffff !important;
+  --ion-color-danger-rgb: 204, 51, 51;
+  --ion-color-danger-shade: #b32d2d;
+  --ion-color-danger-tint: #d14747;
+  /* Light, Medium, Dark shades for elements - forced contrast to white */
+  --ion-color-light: #2c2c2c;
+  --ion-color-light-contrast: #ffffff !important; /* Forced to white for readability */
+  --ion-color-light-rgb: 44, 44, 44;
+  --ion-color-light-shade: #272727;
+  --ion-color-light-tint: #424242;
+  --ion-color-medium: #757575;
+  --ion-color-medium-contrast: #ffffff !important; /* Forced to white for readability */
+  --ion-color-medium-rgb: 117, 117, 117;
+  --ion-color-medium-shade: #676767;
+  --ion-color-medium-tint: #838383;
+  --ion-color-dark: #ffffff;
+  --ion-color-dark-contrast: #121212;
+  --ion-color-dark-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #e0e0e0;
+  --ion-color-dark-tint: #ffffff;
+}
+
+/* Additional dark mode overrides for specific Ionic components - aggressive text color enforcement */
+body.dark ion-content {
+  --background: #121212;
+}
+
+body.dark ion-list {
+  background: #121212;
+}
+
+body.dark ion-item {
+  --background: #121212;
+  --color: #ffffff !important; /* Forced to white for visibility */
+  --inner-border-width: 0;
+  --border-color: #333333;
+}
+
+body.dark ion-list-header {
+  --background: #2a2a2a;
+  --color: #ffffff !important; /* Forced to white for visibility */
+}
+
+body.dark ion-button {
+  --background: #ff6600;
+  --color: #ffffff !important; /* Forced button text to white */
+}
+
+body.dark ion-label {
+  --color: #ffffff !important; /* Forced all labels to white for visibility */
+}
+
+body.dark ion-input {
+  --color: #ffffff !important; /* Forced input text to white */
+}
+
+body.dark ion-select {
+  --color: #ffffff !important; /* Forced select text to white */
+}
+
+body.dark ion-select-option {
+  color: #ffffff !important; /* Forced select option text to white */
+}
+
+body.dark ion-toggle {
+  --handle-background-checked: #ff6600;
+  --color: #ffffff !important; /* Forced toggle associated text to white */
+}
+
+body.dark ion-range {
+  --knob-background: #ff6600;
+  --color: #ffffff !important; /* Forced range associated text to white */
+}
+
+/* Catch-all for any text elements in dark mode */
+body.dark,
+body.dark * {
+  color: #ffffff !important; /* Ultimate fallback to force all text white */
+}
+
+/* Dark theme for loading dialogs and backdrops */
+body.dark ion-loading {
+  --background: #1e1e1e;
+  --spinner-color: #ff6600; /* Ensured spinner stays orange */
+  --color: #ffffff !important; /* Forced loading text to white */
+}
+
+/* Specific override to ensure the spinner circle remains orange */
+body.dark .loading-spinner ion-spinner.spinner-crescent {
+  color: #ff6600 !important; /* Forced spinner color to orange */
+  --color: #ff6600 !important; /* Additional variable override for spinner */
+}
+
+body.dark ion-backdrop {
+  --background: rgba(0, 0, 0, 0.7);
 }

@@ -26,10 +26,12 @@ import { SelectChangeEventDetail, ToggleChangeEventDetail, RangeChangeEventDetai
 import { CraftyControlActions } from '../../state/CraftyControlActions';
 import CraftyControl from '../../crafty/WebBluetoothCraftyControl';
 import { isNumber } from 'util';
+import { useTheme } from '../../ThemeContext'; // Added import for theme context hook
 import CraftyLogo from '../../assets/favicon.png';
 
 const Settings: React.FC<RouteComponentProps> = ({ history }) => {
   const { state, dispatch } = useContext(AppContext) as { state: ICraftyControlState, dispatch: React.Dispatch<IAction> };
+  const { theme, setTheme } = useTheme(); // Added hook to access and modify theme
   const [vibration, setVibration] = useState(() => ((state.craftySettings & 1) !== 1));
   const [charge, setCharge] = useState(() => ((state.craftySettings & 2) !== 2));
   const [led, setLed] = useState(-1);
@@ -42,24 +44,19 @@ const Settings: React.FC<RouteComponentProps> = ({ history }) => {
     if (vibration !== value) {
       setVibration(value);
     }
-
     value = (state.craftySettings & 2) !== 2;
     if (charge !== value) {
       setCharge(value);
     }
-
     if (led === -1 && state.led >= 0) {
       setLed(state.led);
     }
-
     if (setPointStep !== state.settings.setPointStep) {
       setSetPointStep(state.settings.setPointStep);
     }
-
     if (boostStep !== state.settings.boostStep) {
       setBoostStep(state.settings.boostStep);
     }
-
   }, [state.craftySettings, vibration, charge, state.led, led, setPointStep, state.settings.setPointStep, boostStep, state.settings.boostStep]);
 
   const onUnitsChanged = (event: CustomEvent<SelectChangeEventDetail>) => {
@@ -69,13 +66,12 @@ const Settings: React.FC<RouteComponentProps> = ({ history }) => {
         dispatch({ type: CraftyControlActions.updateUnits, payload: value })
       });
     }
-  }
+  };
 
   const onVibrationChanged = (event: CustomEvent<ToggleChangeEventDetail>) => {
     if (state.updating) {
       return;
     }
-
     const checked = (state.craftySettings & 1) === 1;
     if (vibration !== checked) {
       const value = (state.craftySettings & 2) | (checked ? 0 : 1);
@@ -85,13 +81,12 @@ const Settings: React.FC<RouteComponentProps> = ({ history }) => {
         setVibration(!vibration);
       });
     }
-  }
+  };
 
   const onChargeChanged = (event: CustomEvent<ToggleChangeEventDetail>) => {
     if (state.updating) {
       return;
     }
-
     const checked = (state.craftySettings & 2) === 2;
     if (charge !== checked) {
       const value = (state.craftySettings & 1) | (checked ? 0 : 2);
@@ -102,20 +97,18 @@ const Settings: React.FC<RouteComponentProps> = ({ history }) => {
       }).catch(reason => {
         dispatch({ type: CraftyControlActions.updateSettings, payload: state.craftySettings });
         console.log('Error updating characteristic.');
-      })
+      });
     }
-  }
+  };
 
   const onLedChanged = (event: CustomEvent<RangeChangeEventDetail>) => {
     if (state.updating) {
       return;
     }
-
     if (event.detail.value) {
       const value = event.detail.value as number;
       newLed = value;
       setLed(value);
-
       if (value !== state.led) {
         setTimeout(() => {
           console.log(`LED: ${value} ? ${newLed}`);
@@ -127,7 +120,7 @@ const Settings: React.FC<RouteComponentProps> = ({ history }) => {
         }, 500);
       }
     }
-  }
+  };
 
   const onStepChanged = (event: CustomEvent<InputChangeEventDetail>) => {
     if (event.detail.value) {
@@ -136,7 +129,7 @@ const Settings: React.FC<RouteComponentProps> = ({ history }) => {
         dispatch({ type: CraftyControlActions.setPointStepChanged, payload: value });
       }
     }
-  }
+  };
 
   const onBoostStepChanged = (event: CustomEvent<InputChangeEventDetail>) => {
     if (event.detail.value) {
@@ -145,7 +138,14 @@ const Settings: React.FC<RouteComponentProps> = ({ history }) => {
         dispatch({ type: CraftyControlActions.boostStepChanged, payload: value });
       }
     }
-  }
+  };
+
+  // Added function to handle theme selection changes
+  const onThemeChanged = (event: CustomEvent<SelectChangeEventDetail>) => {
+    if (event.detail.value) {
+      setTheme(event.detail.value as 'light' | 'dark' | 'system');
+    }
+  };
 
   return (
     !state.connected ? <Redirect to="/connect" /> :
@@ -190,6 +190,15 @@ const Settings: React.FC<RouteComponentProps> = ({ history }) => {
                 <IonLabel>LED Brightness</IonLabel>
                 <IonRange min={0} max={100} value={led} onIonChange={onLedChanged} step={5} />
               </IonRow>
+            </IonItem>
+            {/* Added theme selection dropdown */}
+            <IonItem>
+              <IonLabel>Theme</IonLabel>
+              <IonSelect value={theme} onIonChange={onThemeChanged}>
+                <IonSelectOption value="system">Default</IonSelectOption>
+                <IonSelectOption value="light">Light</IonSelectOption>
+                <IonSelectOption value="dark">Dark</IonSelectOption>
+              </IonSelect>
             </IonItem>
             <IonItem class="spacer" />
           </IonList>
