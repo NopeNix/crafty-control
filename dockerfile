@@ -9,8 +9,6 @@ COPY ./files ./crafty-control
 WORKDIR /crafty-control
 
 RUN npm install --force
-RUN npm install -g @ionic/cli
+RUN npm install -g serve --force
 
-ENV NODE_OPTIONS=--openssl-legacy-provider
-
-CMD ionic serve
+CMD serve -s build -l 8100
