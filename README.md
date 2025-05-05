@@ -35,12 +35,12 @@ Below are screenshots of the Crafty Control app in both Light and Dark themes, s
 ### Dark Theme
 | **Start Page** | **Connecting** | **Connected** | **Settings** | **Informations** |
 |--------------|----------------|---------------|--------------|-----------------|
-| ![Dark Start](https://raw.githubusercontent.com/NopeNix/crafty-control/main/screenshots/dark-start.png) | ![Dark Connecting](https://raw.githubusercontent.com/NopeNix/crafty-control/main/screenshots/dark-connecting.png) | ![Dark Connected](https://raw.githubusercontent.com/NopeNix/crafty-control/main/screenshots/dark-connected.png) | ![Dark Settings](https://raw.githubusercontent.com/NopeNix/crafty-control/main/screenshots/dark-settings.png) | ![Dark Info](https://raw.githubusercontent.com/NopeNix/crafty-control/main/screenshots/dark-info.png) |
+| ![Dark Start](./screenshots/dark-start.png) | ![Dark Connecting](./screenshots/dark-connecting.png) | ![Dark Connected](./screenshots/dark-connected.png) | ![Dark Settings](./screenshots/dark-settings.png) | ![Dark Info](./screenshots/dark-info.png) |
 
 ### Light Theme
 | **Start Page** | **Connecting** | **Connected** | **Settings** | **Informations** |
 |--------------|----------------|---------------|--------------|-----------------|
-| ![Light Start](https://raw.githubusercontent.com/NopeNix/crafty-control/main/screenshots/light-start.png) | ![Light Connecting](https://raw.githubusercontent.com/NopeNix/crafty-control/main/screenshots/light-connecting.png) | ![Light Connected](https://raw.githubusercontent.com/NopeNix/crafty-control/main/screenshots/light-connected.png) | ![Light Settings](https://raw.githubusercontent.com/NopeNix/crafty-control/main/screenshots/light-settings.png) | ![Light Info](https://raw.githubusercontent.com/NopeNix/crafty-control/main/screenshots/light-info.png) |
+| ![Light Start](./screenshots/light-start.png) | ![Light Connecting](./screenshots/light-connecting.png) | ![Light Connected](./screenshots/light-connected.png) | ![Light Settings](./screenshots/light-settings.png) | ![Light Info](./screenshots/light-info.png) |
 
 ## Features
 - **Dark Theme Support**: The app now includes a dark theme, with the ability to toggle between Light, Dark, and System Default modes. The theme respects system preferences by default and allows user overrides via the Settings page. Text visibility has been optimized for dark mode with forced white text colors.
