@@ -1,3 +1,8 @@
+![GitHub Repo stars](https://img.shields.io/github/stars/nopenix/crafty-control)
+[![Build and Push to Docker Hub](https://github.com/NopeNix/crafty-control/actions/workflows/Build%20and%20Push%20to%20Docker%20Hub.yml/badge.svg)](https://github.com/NopeNix/crafty-control/actions/workflows/Build%20and%20Push%20to%20Docker%20Hub.yml)
+![Docker Pulls](https://img.shields.io/docker/pulls/nopenix/crafty-control)
+
+
 # crafty-control
 Control your Crafty Vaporizer by Storz &amp; Bickel from a Web Page! 
 Online web application is available at:
