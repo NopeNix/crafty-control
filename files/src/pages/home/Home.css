@@ -1,5 +1,5 @@
 :host(open) .inner-scroll {
-      display: flex;
+  display: flex;
 }
 
 .version-label {
@@ -34,14 +34,14 @@
 }
 
 .content ion-list {
-    width: 100%; 
-    height: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-  }
+  width: 100%; 
+  height: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
 
 .content ion-list ion-list-header {
   background-color: var(--ion-tab-bar-color-activated);
@@ -84,8 +84,9 @@
   font-weight: bold;
   min-width: 200px;
   max-width: 200px;
-  text-align: right;
-  color: var(--ion-color-primary)
+  /* Changed from text-align: right to center to ensure text content is centered within the container */
+  text-align: center;
+  color: var(--ion-color-primary);
 }
 
 .content .setpoint-item {
@@ -107,7 +108,8 @@
   margin: 0px 10px 0px 10px;
   min-width: 200px;
   max-width: 200px;
-  text-align: right;
+  /* Changed from text-align: right to center to ensure text content is centered within the container */
+  text-align: center;
 }
 
 .content .setpoint-item .spacer {
@@ -129,6 +131,8 @@
 
 .battery-text {
   fill: var(--ion-color-dark-tint);
+  /* Added text-anchor: middle to center the text horizontally at the x position */
+  text-anchor: middle;
 }
 
 .battery-gauge {
@@ -151,7 +155,6 @@
 }
 
 .content .booster .booster-value {
-
 }
 
 .content .booster .booster-row {

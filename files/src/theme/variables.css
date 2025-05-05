@@ -136,6 +136,9 @@ body.dark {
   --ion-color-dark-rgb: 255, 255, 255;
   --ion-color-dark-shade: #e0e0e0;
   --ion-color-dark-tint: #ffffff;
+  --ion-checkbox-border-color: #ff6600;
+  --ion-checkbox-border-style: solid;
+  --ion-checkbox-border-width: 2px;
 }
 
 /* Additional dark mode overrides for specific Ionic components - aggressive text color enforcement */
@@ -211,4 +214,10 @@ body.dark .loading-spinner ion-spinner.spinner-crescent {
 
 body.dark ion-backdrop {
   --background: rgba(0, 0, 0, 0.7);
+}
+
+body.dark ion-checkbox {
+  border-color: #ff6600;
+  border-style: solid;
+  border-width: 2px;
 }
